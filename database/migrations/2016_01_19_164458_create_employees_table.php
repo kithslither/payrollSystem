@@ -14,14 +14,15 @@ class CreateEmployeesTable extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('fname');
-            $table->string('mname');
-            $table->string('lname');
-            $table->timestamp('bday');
+            $table->string('employee_number');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->timestamp('birthday');
             $table->string('phone');
             $table->string('city');
             $table->string('address');
             $table->string('postalcode');
+            $table->timestamps();
         });
     }
 
